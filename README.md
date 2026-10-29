@@ -31,3 +31,5 @@ Git tracks changes of files.
    - 删错了 `git checkout -- <file>` 版本库里还有, 直接恢复到最新版本(必须是曾添加到库里的文件; 会丢失最近一次提交后修改的内容(没有提交就删除))
 8. remote
    - `git remote add origin(远程库名字, 默认为origin) git@github.com:Frisius258/LearnGit.git`
+9. push
+   - 每次本地提交后, 只要有必要, 就可以使用命令 `git push origin master` 推送最新修改
