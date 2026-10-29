@@ -4,6 +4,7 @@ Git is a version control system.
 Git is free software.
 Git is a distributed version control system.
 Git is free software distributed under the GPL.
+Git tracks changes.
 ![photo](https://pic2.zhimg.com/v2-4f61dac0b425ebe34efc88d11a68f27b_1440w.jpg)
 
 ### Commands
@@ -20,3 +21,4 @@ Git is free software distributed under the GPL.
    - `--hard` 回退到上个版本已提交的状态
    - `--soft` 回退到上个版本未提交的状态
    - `--mixed` 回退到上个版本已添加但未提交的状态
+
