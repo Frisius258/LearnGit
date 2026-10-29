@@ -15,3 +15,8 @@ Git is free software distributed under the GPL.
    `git status` for which file is modified.
 4. diff
    `git diff ""` for specific details of the difference
+5. reset
+   - `git reset --hard HEAD^^` ^代表上一个版本, 
+   - `--hard` 回退到上个版本已提交的状态
+   - `--soft` 回退到上个版本未提交的状态
+   - `--mixed` 回退到上个版本已添加但未提交的状态
