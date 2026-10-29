@@ -29,3 +29,5 @@ Git tracks changes of files.
 7. rm
    - `rm <file>`(或手动删除) + `git rm <file>`(类似手动修改后 + `git add <file>`)
    - 删错了 `git checkout -- <file>` 版本库里还有, 直接恢复到最新版本(必须是曾添加到库里的文件; 会丢失最近一次提交后修改的内容(没有提交就删除))
+8. remote
+   - `git remote add origin(远程库名字, 默认为origin) git@github.com:Frisius258/LearnGit.git`
