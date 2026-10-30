@@ -1,6 +1,6 @@
 # **GitLearning**
 [Git](https://liaoxuefeng.com/books/git/introduction/index.html)
-Git is a version control system.
+ is a version control system.
 Git is free software.
 Git is a distributed version control system.
 Git is free software distributed under the GPL.
@@ -45,4 +45,5 @@ Git tracks changes of files.
    - `git switch <name>` 切换到已有分支  
    - 解决冲突:
      - 当在同一节点的不同分支对相同文件都做了修改的时候, 这时会 `Merge conflict`
-       - 分支测试1
+     - 分支管理: 实际开发中, master 分支应该非常稳定, 只在发布版本时变更；实际工作时都在`dev`分支上干活, 每个人都有自己的分支, 不时需要向`dev`合并
+     - ![Image](https://liaoxuefeng.com/books/git/branch/policy/branches.png)
