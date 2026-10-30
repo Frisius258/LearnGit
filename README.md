@@ -33,8 +33,11 @@ Git tracks changes of files.
    - 删错了 `git checkout -- <file>` 版本库里还有, 直接恢复到最新版本(必须是曾添加到库里的文件; 会丢失最近一次提交后修改的内容(没有提交就删除))
 9.  remote
    - `git remote add origin(远程库名字, 默认为origin) git@github.com:Frisius258/LearnGit.git`
+   - `git remote` 查看远程库的信息
+   - `git remote -v` 更详细的信息
 10. push
    - 每次本地提交后, 只要有必要, 就可以使用命令 `git push origin master` 推送最新修改
+   - 分支是否推送取决于你和你的小伙伴是否需要共同在上面开发, 一般时刻推送 master 主分支和 dev 开发分支
 11. branch
    - `git branch` 列出所有分支
    - `git checkout -b <name>` 创建并切换到分支 `<name>`
@@ -56,3 +59,16 @@ Git tracks changes of files.
    - `git stash list` 查看之前的工作区被存到哪里了
    - `git stash apply` 恢复当时的工作现场, 其次使用 `git stash drop` 删除stash中的内容
    - `git stash pop` 恢复工作现场并删除stash内容
+   - 在master分支上修复了bug后, 由于dev是修bug前从master分过来的, 可以使用`cherry-pick`命令修复同样的bug(不用再手动把修bug的代码复制过来了)
+   - `git cherry-pick <commit>` `<commit>`(SHA1)代表修bug的这个提交所做的修改, 而不是把`master`分支merge过来(Git会自动给dev分支做一次提交)
+14. feature
+   - 开发新功能的时候, 最后新建一个feature分支, 这样可以在最后不想要此功能时直接通过删除分支删除feature
+   - `git branch -D <feature-name>` `-D` 会完全丢失修改
+15. pull
+   - 先指定本地`dev`分支与远程`origin/dev`分支的链接
+     `git branch --set-upstream-to=origin/dev dev`
+   - `git pull` 指定链接后pull, 但merge有冲突, 需要本地手动解决
+16. rebase
+   - 将Git分叉的提交历史整理成一条干净的直线(强迫症狂喜)
+   - `git rebase`
+17. 
