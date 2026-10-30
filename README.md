@@ -88,3 +88,4 @@ Git tracks changes of files.
      - `git tag -d <tagname>` 先从本地删除
      - `git push origin :refs/tags/<tagname>` 从远程删除 `:...`的作用是提供了被删除的tag原先的位置, 让remote库发现这个更改并删除
 ### **[PULL request](https://liaoxuefeng.com/books/git/github/index.html)**
+### **[.gitignore](https://liaoxuefeng.com/books/git/customize/ignore/index.html)**
