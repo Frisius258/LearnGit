@@ -33,3 +33,15 @@ Git tracks changes of files.
    - `git remote add origin(远程库名字, 默认为origin) git@github.com:Frisius258/LearnGit.git`
 9. push
    - 每次本地提交后, 只要有必要, 就可以使用命令 `git push origin master` 推送最新修改
+10. branch
+   - `git branch` 列出所有分支
+   - `git checkout -b <name>` 创建并切换到分支 `<name>`
+   - `git checkout <name>` 切换到分支 `<name>`
+   - `git merge <name>` 先切换回`master`分支, 然后合并 *(master)和 `<name>`(合并指定分支到当前分支)
+   - `git branch -d <name>` 合并完成后删除`<name>`分支
+11. switch
+   - 更科学的切换分支方式
+   - `git switch -c <name>` 创建并切换到新的分支 `<name>`
+   - `git switch <name>` 切换到已有分支  
+   - 解决冲突:
+     - 当在同一节点的不同分支对相同文件都做了修改的时候, 这时会 `Merge conflict`
