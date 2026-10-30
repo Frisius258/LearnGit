@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# LearnGit
-New repo for git learning
-=======
 # **GitLearning**
 [Git](https://liaoxuefeng.com/books/git/introduction/index.html)
  is a version control system.
@@ -54,4 +50,9 @@ Git tracks changes of files.
      - 当在同一节点的不同分支对相同文件都做了修改的时候, 这时会 `Merge conflict`
      - 分支管理: 实际开发中, master 分支应该非常稳定, 只在发布版本时变更；实际工作时都在`dev`分支上干活, 每个人都有自己的分支, 不时需要向`dev`合并
      - ![Image](https://liaoxuefeng.com/books/git/branch/policy/branches.png)
->>>>>>> master
+13. stash
+   - `git stash` 用于保存当前的工作现场并进入一个干净的临时工作区, 这时可以随意切换创建分支而不影响之前没有add和commit的代码
+   - 修复完成后切换到`master`分支完成合并并删除修bug的分支
+   - `git stash list` 查看之前的工作区被存到哪里了
+   - `git stash apply` 恢复当时的工作现场, 其次使用 `git stash drop` 删除stash中的内容
+   - `git stash pop` 恢复工作现场并删除stash内容
