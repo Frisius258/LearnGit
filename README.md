@@ -83,5 +83,8 @@ Git tracks changes of files.
    - `git tag -a v0.1 -m "version 0.1 released" 1094adb` 创建带有说明的标签，用-a指定标签名，-m指定说明文字，使用`git show <tagname>` 可以看到说明文字
    - `git tag -d <tagname>` 删除打错的标签
    - `git push origin <tagname>` 将某个标签推送到远程
-
-### **t**
+   - `git push origin --tags` 一次性推送全部尚未推送到远程的本地标签
+   - 如果tag已经推送到远程, 删除会更麻烦
+     - `git tag -d <tagname>` 先从本地删除
+     - `git push origin :refs/tags/<tagname>` 从远程删除 `:...`的作用是提供了被删除的tag原先的位置, 让remote库发现这个更改并删除
+### **[PULL request](https://liaoxuefeng.com/books/git/github/index.html)**
