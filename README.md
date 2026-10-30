@@ -73,5 +73,15 @@ Git tracks changes of files.
    - 将Git分叉的提交历史整理成一条干净的直线(强迫症狂喜)
    - `git rebase`
 ### **tag**
-   - `git switch`先切换
-### **18.**
+   - 实质就是指向commit的SHA1 id的一个别名指针
+   - `git switch`先切换到需要的分支
+   - `git tag <name>` 创建一个新的tag
+   - `git tag`查看已有的所有tag, tag是按字母排序的
+   - `git tag <name>` 默认tag打在最新提交的commit上
+   - `git show <tagname>` 可以查看标签的信息
+   - 如果忘了给之前的版本打tag, 可以使用`log...-commit`找到历史提交的id
+   - `git tag -a v0.1 -m "version 0.1 released" 1094adb` 创建带有说明的标签，用-a指定标签名，-m指定说明文字，使用`git show <tagname>` 可以看到说明文字
+   - `git tag -d <tagname>` 删除打错的标签
+   - `git push origin <tagname>` 将某个标签推送到远程
+
+### **t**
