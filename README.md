@@ -16,30 +16,33 @@ Git tracks changes of files.
    `git status` for which file is modified.
 4. diff
    `git diff ""` for specific details of the difference
-5. reset
+5. log
+   - `git log --graph --pretty=oneline --abbrev-commit` 图形化显示分支
+6. reset
    - `git reset --hard HEAD^^` ^代表上一个版本, 
    - `--hard` 回退到上个版本已提交的状态
    - `--soft` 回退到上个版本未提交的状态
    - `--mixed` 回退到上个版本已添加但未提交的状态
    - `git reset HEAD <file>` 可以把暂存区的修改撤销(unstage), 重新放回工作区
-6. checkout(其实就是用版本库里的版本替换工作区的版本, 无论修改还是删除)
+7. checkout(其实就是用版本库里的版本替换工作区的版本, 无论修改还是删除)
    - `git checkout -- README.md`
      - 自修改后未放入暂存区, 撤销修改回到和版本库一样的状态
      - 已经添加到暂存区后修改, 撤销后回到添加到暂存区的状态 
-7. rm
+8. rm
    - `rm <file>`(或手动删除) + `git rm <file>`(类似手动修改后 + `git add <file>`)
    - 删错了 `git checkout -- <file>` 版本库里还有, 直接恢复到最新版本(必须是曾添加到库里的文件; 会丢失最近一次提交后修改的内容(没有提交就删除))
-8. remote
+9.  remote
    - `git remote add origin(远程库名字, 默认为origin) git@github.com:Frisius258/LearnGit.git`
-9. push
+10. push
    - 每次本地提交后, 只要有必要, 就可以使用命令 `git push origin master` 推送最新修改
-10. branch
+11. branch
    - `git branch` 列出所有分支
    - `git checkout -b <name>` 创建并切换到分支 `<name>`
    - `git checkout <name>` 切换到分支 `<name>`
    - `git merge <name>` 先切换回`master`分支, 然后合并 *(master)和 `<name>`(合并指定分支到当前分支)
+   - `git merge --no-ff -m "merge with no-ff" dev` 强制禁用`Fast forward`模式, 可以在删除分支后的历史中看到分支的合并信息(这样会创建一个新的commit, 因此需要-m(commit 的 message参数)).
    - `git branch -d <name>` 合并完成后删除`<name>`分支
-11. switch
+12. switch
    - 更科学的切换分支方式
    - `git switch -c <name>` 创建并切换到新的分支 `<name>`
    - `git switch <name>` 切换到已有分支  
