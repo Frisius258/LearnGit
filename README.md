@@ -45,3 +45,4 @@ Git tracks changes of files.
    - `git switch <name>` 切换到已有分支  
    - 解决冲突:
      - 当在同一节点的不同分支对相同文件都做了修改的时候, 这时会 `Merge conflict`
+       - 分支测试1
